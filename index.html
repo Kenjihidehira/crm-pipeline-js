@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM Pipeline JS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <strong>PipelineX</strong>
+      <div>
+        <button id="exportCsvBtn">Exportar CSV</button>
+        <button class="ghost" id="resetBtn">Restaurar demo</button>
+      </div>
+    </nav>
+    <section>
+      <p class="eyebrow">CRM comercial</p>
+      <h1>Pipeline de vendas com forecast e arraste de oportunidades</h1>
+      <p>Gerencie negócios por etapa, acompanhe receita ponderada, priorize follow-ups e simule forecast sem bibliotecas externas.</p>
+    </section>
+  </header>
+
+  <main class="container">
+    <section class="toolbar">
+      <input id="searchInput" type="search" placeholder="Buscar empresa, contato ou produto" />
+      <select id="ownerFilter">
+        <option value="all">Todos responsáveis</option>
+      </select>
+      <select id="segmentFilter">
+        <option value="all">Todos segmentos</option>
+      </select>
+      <select id="sortFilter">
+        <option value="value">Maior valor</option>
+        <option value="date">Próximo follow-up</option>
+        <option value="probability">Maior probabilidade</option>
+      </select>
+    </section>
+
+    <section class="kpis" id="kpis"></section>
+
+    <section class="layout">
+      <aside class="panel">
+        <p class="eyebrow">Nova oportunidade</p>
+        <h2>Cadastrar negócio</h2>
+        <form id="dealForm">
+          <label>Empresa <input name="company" required placeholder="Ex: Solaris Tech" /></label>
+          <label>Contato <input name="contact" required placeholder="Ex: Marina Costa" /></label>
+          <label>Produto <input name="product" required placeholder="Ex: Plano Enterprise" /></label>
+          <div class="split">
+            <label>Valor <input name="value" type="number" min="1" required /></label>
+            <label>Probabilidade % <input name="probability" type="number" min="1" max="100" value="35" required /></label>
+          </div>
+          <div class="split">
+            <label>Responsável <input name="owner" required placeholder="Ex: Wesley" /></label>
+            <label>Segmento <input name="segment" required placeholder="Ex: Varejo" /></label>
+          </div>
+          <label>Próximo follow-up <input name="nextFollowUp" type="date" required /></label>
+          <label>Observações <textarea name="notes" rows="4" placeholder="Dores, objeções e próximos passos"></textarea></label>
+          <button type="submit">Adicionar ao pipeline</button>
+        </form>
+      </aside>
+
+      <section class="pipeline" id="pipeline"></section>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Agenda comercial</p>
+          <h2>Follow-ups críticos</h2>
+        </div>
+      </div>
+      <div class="followups" id="followups"></div>
+    </section>
+  </main>
+
+  <template id="dealTemplate">
+    <article class="deal" draggable="true">
+      <div class="deal-top">
+        <span class="tag"></span>
+        <button class="delete">×</button>
+      </div>
+      <h3></h3>
+      <p></p>
+      <div class="deal-meta">
+        <span class="value"></span>
+        <span class="probability"></span>
+      </div>
+      <footer></footer>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
