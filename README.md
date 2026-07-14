@@ -1,18 +1,18 @@
-# CRM Pipeline JS
+# CRM Funil de Vendas JS
 
-CRM comercial front-end com pipeline de vendas, forecast e drag and drop.
+CRM comercial com funil de vendas, previsão e movimentação por arrastar e soltar.
 
 ## Funcionalidades
 
 - Cadastro de oportunidades
-- Pipeline com 5 etapas comerciais
-- Drag and drop entre etapas
+- Funil com 5 etapas comerciais
+- Arrastar e soltar entre etapas
 - Probabilidade ajustada conforme avanço no funil
-- Forecast ponderado por probabilidade
-- Métricas de pipeline, forecast, ganhos e probabilidade média
+- Previsão ponderada por probabilidade
+- Métricas do funil, previsão, ganhos e probabilidade média
 - Filtros por responsável, segmento e busca
-- Ordenação por valor, data de follow-up ou probabilidade
-- Agenda de follow-ups críticos
+- Ordenação por valor, data de acompanhamento ou probabilidade
+- Agenda de acompanhamentos críticos
 - Exportação CSV
 - Persistência com `localStorage`
 
@@ -25,6 +25,6 @@ Abra o arquivo `index.html` no navegador.
 - HTML5
 - CSS3
 - JavaScript
-- Drag and Drop API
+- API de arrastar e soltar
 - localStorage
 - Blob API

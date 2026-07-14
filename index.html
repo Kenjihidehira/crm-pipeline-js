@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CRM Pipeline JS</title>
+  <title>CRM Funil de Vendas JS</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
     <nav>
-      <strong>PipelineX</strong>
+      <strong>FunilX</strong>
       <div>
         <button id="exportCsvBtn">Exportar CSV</button>
         <button class="ghost" id="resetBtn">Restaurar demo</button>
@@ -17,8 +17,8 @@
     </nav>
     <section>
       <p class="eyebrow">CRM comercial</p>
-      <h1>Pipeline de vendas com forecast e arraste de oportunidades</h1>
-      <p>Gerencie negócios por etapa, acompanhe receita ponderada, priorize follow-ups e simule forecast sem bibliotecas externas.</p>
+      <h1>Funil de vendas com previsão e movimentação de oportunidades</h1>
+      <p>Gerencie negócios por etapa, acompanhe receita ponderada, priorize acompanhamentos e simule previsões sem bibliotecas externas.</p>
     </section>
   </header>
 
@@ -33,7 +33,7 @@
       </select>
       <select id="sortFilter">
         <option value="value">Maior valor</option>
-        <option value="date">Próximo follow-up</option>
+        <option value="date">Próximo acompanhamento</option>
         <option value="probability">Maior probabilidade</option>
       </select>
     </section>
@@ -47,7 +47,7 @@
         <form id="dealForm">
           <label>Empresa <input name="company" required placeholder="Ex: Solaris Tech" /></label>
           <label>Contato <input name="contact" required placeholder="Ex: Marina Costa" /></label>
-          <label>Produto <input name="product" required placeholder="Ex: Plano Enterprise" /></label>
+          <label>Produto <input name="product" required placeholder="Ex: Plano Corporativo" /></label>
           <div class="split">
             <label>Valor <input name="value" type="number" min="1" required /></label>
             <label>Probabilidade % <input name="probability" type="number" min="1" max="100" value="35" required /></label>
@@ -56,9 +56,9 @@
             <label>Responsável <input name="owner" required placeholder="Ex: Wesley" /></label>
             <label>Segmento <input name="segment" required placeholder="Ex: Varejo" /></label>
           </div>
-          <label>Próximo follow-up <input name="nextFollowUp" type="date" required /></label>
+          <label>Próximo acompanhamento <input name="nextFollowUp" type="date" required /></label>
           <label>Observações <textarea name="notes" rows="4" placeholder="Dores, objeções e próximos passos"></textarea></label>
-          <button type="submit">Adicionar ao pipeline</button>
+          <button type="submit">Adicionar ao funil</button>
         </form>
       </aside>
 
@@ -69,7 +69,7 @@
       <div class="section-head">
         <div>
           <p class="eyebrow">Agenda comercial</p>
-          <h2>Follow-ups críticos</h2>
+          <h2>Acompanhamentos críticos</h2>
         </div>
       </div>
       <div class="followups" id="followups"></div>

@@ -11,7 +11,7 @@ const demoDeals = [
     id: "deal-1",
     company: "Solaris Tech",
     contact: "Marina Costa",
-    product: "Plano Enterprise",
+    product: "Plano Corporativo",
     value: 42000,
     probability: 75,
     owner: "Wesley",
@@ -149,8 +149,8 @@ function renderKpis(list) {
     : 0;
 
   const cards = [
-    ["Pipeline", currency(total)],
-    ["Forecast", currency(weighted)],
+    ["Funil", currency(total)],
+    ["Previsão", currency(weighted)],
     ["Ganho", currency(won)],
     ["Prob. média", `${avgProbability.toFixed(1).replace(".", ",")}%`]
   ];
@@ -222,7 +222,7 @@ function createDealCard(deal) {
   details.textContent = `${deal.product} • ${deal.contact}`;
   value.textContent = currency(deal.value);
   probability.textContent = `${deal.probability}%`;
-  footer.textContent = `${deal.owner} • follow-up ${deal.nextFollowUp.split("-").reverse().join("/")}`;
+  footer.textContent = `${deal.owner} • acompanhamento ${deal.nextFollowUp.split("-").reverse().join("/")}`;
   card.dataset.id = deal.id;
 
   card.addEventListener("dragstart", () => {
