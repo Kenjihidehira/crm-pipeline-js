@@ -1,0 +1,33 @@
+:root { color-scheme: light; }
+body { background: #f4eadf; color: #3b2621; font-family: "Trebuchet MS", "Segoe UI", sans-serif; }
+.hero { background: #a74332; color: #fff7ed; border-bottom: 8px solid #efbd5a; padding: 24px max(24px, calc((100vw - 1320px) / 2)); }
+.hero nav { max-width: 1320px; border-bottom: 1px solid #d17767; }
+.hero nav strong { font-family: Georgia, serif; font-size: 28px; }
+.hero nav button { border-radius: 0; border: 1px solid #fff7ed; background: #fff7ed; color: #7f3025; }
+.hero nav button.ghost { background: transparent; color: #fff; }
+.hero section { max-width: 1320px; }
+.hero h1 { max-width: 980px; color: #fff; font-family: Georgia, serif; font-size: clamp(38px, 6vw, 68px); font-weight: 500; line-height: .95; }
+.eyebrow { color: #d2604d; }
+.hero .eyebrow { color: #ffd476; }
+.container { max-width: 1320px; padding: 26px; }
+.toolbar { border: 1px solid #b88f81; border-radius: 0; background: #fffaf4; }
+input, select, textarea { border-radius: 0; border: 1px solid #b88f81; background: #fff; color: #3b2621; }
+.kpis { gap: 0; border: 1px solid #b88f81; }
+.kpis article { border: 0; border-right: 1px solid #b88f81; border-radius: 0; background: #fffaf4; box-shadow: none; }
+.kpis article:last-child { border-right: 0; }
+.kpis strong { color: #7f3025; font-family: Georgia, serif; }
+.layout { grid-template-columns: 310px minmax(0, 1fr); gap: 18px; }
+.panel { border: 1px solid #b88f81; border-radius: 0; background: #fffaf4; box-shadow: none; }
+.panel h2 { font-family: Georgia, serif; font-weight: 500; }
+form button { border-radius: 0; background: #a74332; color: #fff; box-shadow: 3px 3px 0 #efbd5a; }
+.pipeline { gap: 10px; }
+.pipeline > * { border-radius: 0; border: 1px solid #b88f81; background: #ead8c8; }
+.deal { border-radius: 0; border: 1px solid #b88f81; border-top: 5px solid #2d6f5b; background: #fffaf4; box-shadow: none; }
+.tag { border-radius: 0; background: #efbd5a; color: #3b2621; }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .pipeline { overflow-x: auto; } }
+@media (max-width: 620px) {
+  .container { padding: 16px 10px 34px; }
+  .kpis { grid-template-columns: 1fr; }
+  .kpis article { min-width: 0; border-right: 0; border-bottom: 1px solid #b88f81; }
+  .pipeline { max-width: 100%; min-width: 0; overflow-x: auto; }
+}
