@@ -86,11 +86,11 @@ const sortFilter = document.querySelector("#sortFilter");
 const exportCsvBtn = document.querySelector("#exportCsvBtn");
 const resetBtn = document.querySelector("#resetBtn");
 
-let deals = JSON.parse(localStorage.getItem("crm-pipeline-deals") || "null") || demoDeals;
+let deals = SafeStorage.read("crm-pipeline-deals", demoDeals, Array.isArray);
 let draggedDealId = null;
 
 function save() {
-  localStorage.setItem("crm-pipeline-deals", JSON.stringify(deals));
+  SafeStorage.write("crm-pipeline-deals", deals);
 }
 
 function currency(value) {

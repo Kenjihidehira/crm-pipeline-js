@@ -1,6 +1,12 @@
 # CRM Funil de Vendas JS
 
+[![CI](https://github.com/Kenjihidehira/crm-pipeline-js/actions/workflows/ci.yml/badge.svg)](https://github.com/Kenjihidehira/crm-pipeline-js/actions/workflows/ci.yml)
+
 CRM comercial com funil de vendas, previsão e movimentação por arrastar e soltar.
+
+## Persistência local segura
+
+O módulo `storage.js` centraliza leitura e escrita no `localStorage`, valida o formato salvo, recupera JSON corrompido sem derrubar a interface e trata falhas de quota. Os cenários negativos são executados por `npm test` e pela CI.
 
 ## Funcionalidades
 
